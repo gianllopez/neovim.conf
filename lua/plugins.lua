@@ -14,11 +14,18 @@ return {
           {
             "L3MON4D3/LuaSnip",
             dependencies = { "rafamadriz/friendly-snippets" },
+            config = function()
+              require("luasnip.loaders.from_vscode").lazy_load()
+            end,
+          },
+          {
+            "windwp/nvim-autopairs",
+            event = "InsertEnter",
+            opts = {},
           },
           {
             "hrsh7th/cmp-buffer",
             "hrsh7th/cmp-path",
-            "hrsh7th/cmp-cmdline",
             "hrsh7th/nvim-cmp",
             "saadparwaiz1/cmp_luasnip",
           },
@@ -27,7 +34,7 @@ return {
           return require("overrides.nvim-cmp")
         end,
         config = function(_, opts)
-          require("cmp").setup(opts)
+          require("config.nvim-cmp").config(opts)
         end,
       },
     },
@@ -63,6 +70,10 @@ return {
   {
     "filipdutescu/renamer.nvim",
     dependencies = { "nvim-lua/plenary.nvim" },
+    opts = {},
+  },
+  {
+    "numToStr/Comment.nvim",
     opts = {},
   },
   {

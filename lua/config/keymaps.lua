@@ -1,11 +1,13 @@
 local keymaps = {
   n = {
     [";"] = ":",                                                                               -- enter on command mode
-    ["<leader>s"] = "<Cmd>update<CR>",                                                         -- save current buffer
 
     ["<leader>e"] = "<Cmd>NvimTreeFocus<CR>",                                                  -- focus `NvimTree`
     ["<leader>n"] = "<Cmd>NvimTreeToggle<CR>",                                                 -- toggle `NvimTree`
 
+    ["<leader>s"] = "<Cmd>update<CR>",                                                         -- save current buffer
+    ["<leader>cc"] = "<Cmd>bd<CR>",                                                            -- close current buffer at left
+    ["<leader>,"] = "<C-w>l<CR>",                                                              -- focus the buffer at right
     ["<Tab>"] = "<Cmd>BufferLineCycleNext<CR>",                                                -- move to the next buffer
     ["<S-Tab>"] = "<Cmd>BufferLineCyclePrev<CR>",                                              -- move to the previous buffer
     ["<leader>1"] = "<Cmd>BufferLineGoToBuffer 1<CR>",                                         -- move to the buffer on 1th position
@@ -13,7 +15,6 @@ local keymaps = {
     ["<leader>3"] = "<Cmd>BufferLineGoToBuffer 3<CR>",                                         -- move to the buffer on 3th position
     ["<leader>4"] = "<Cmd>BufferLineGoToBuffer 4<CR>",                                         -- move to the buffer on 4th position
     ["<leader>5"] = "<Cmd>BufferLineGoToBuffer 5<CR>",                                         -- move to the buffer on 5th position
-    ["<leader>cc"] = "<Cmd>bd<CR>",                                                            -- close current buffer at left
     ["<leader>cl"] = "<Cmd>BufferLineCloseLeft<CR>",                                           -- close current buffer at left
     ["<leader>cr"] = "<Cmd>BufferLineCloseRight<CR>",                                          -- close current buffers at right
     ["<leader>co"] = "<Cmd>BufferLineCloseOthers<CR>",                                         -- close current buffers at right
@@ -34,10 +35,15 @@ local keymaps = {
     ["<leader>S"] = "<Cmd>lua require('spectre').toggle()<CR>",                                -- toogle `nvim-spectre` panel
     ["<leader>Sc"] = "<Cmd>lua require('spectre').open_file_search({ select_word = true })<CR>", -- toogle `nvim-spectre` panel in current file,
 
-    ["<leader>r"] = "<Cmd>lua renamer.rename()<CR>",                                           -- open the `renamer` float input
+    ["<leader>r"] = "<Cmd>lua require('renamer').rename()<CR>",                                -- open the `renamer` float input
 
     ["<S-Up>"] = "<Cmd>:m .-2<CR>",                                                            -- move current line up
     ["<S-Down>"] = "<Cmd>:m .+1<CR>",                                                          -- move current line down
+
+    ["K"] = "<Cmd>lua vim.lsp.buf.hover()<CR>",                                                -- open the lsp hover information
+    ["gd"] = "<Cmd>lua vim.lsp.buf.definition()<CR>",                                          -- go to current position definition
+
+    ["<leader>/"] = "<Cmd>lua require('Comment.api').toggle.linewise.current()<CR>",
   },
 }
 
