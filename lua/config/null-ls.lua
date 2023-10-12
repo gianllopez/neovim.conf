@@ -9,6 +9,9 @@ local sources = {
   formatting.stylua,
   -- frontend
   formatting.prettier,
+  -- backend
+  formatting.black,
+  formatting.isort,
 }
 
 null_ls.setup({

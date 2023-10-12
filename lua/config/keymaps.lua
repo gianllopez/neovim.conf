@@ -43,7 +43,11 @@ local keymaps = {
     ["K"] = "<Cmd>lua vim.lsp.buf.hover()<CR>",                                                -- open the lsp hover information
     ["gd"] = "<Cmd>lua vim.lsp.buf.definition()<CR>",                                          -- go to current position definition
 
-    ["<leader>/"] = "<Cmd>lua require('Comment.api').toggle.linewise.current()<CR>",
+    ["<leader>/"] = "<Cmd>lua require('Comment.api').toggle.linewise.current()<CR>",           -- comment current line
+
+    ["<leader>do"] = "<Cmd>DiffviewOpen<CR>",                                                  -- open the git diff view
+    ["<leader>dc"] = "<Cmd>DiffviewClose<CR>",                                                 -- close the git diff view
+    ["<leader>df"] = "<Cmd>DiffviewToggleFiles<CR>",                                           -- toggle the git diff view files panel
   },
 }
 

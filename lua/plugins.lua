@@ -45,6 +45,12 @@ return {
   {
     "nvim-telescope/telescope.nvim",
     dependencies = { "nvim-lua/plenary.nvim" },
+    opts = function()
+      return require("overrides.telescope")
+    end,
+    config = function(_, opts)
+      require("telescope").setup(opts)
+    end,
   },
   {
     "folke/trouble.nvim",
@@ -68,6 +74,9 @@ return {
     dependencies = { "nvim-lua/plenary.nvim" },
   },
   {
+    "sindrets/diffview.nvim",
+  },
+  {
     "filipdutescu/renamer.nvim",
     dependencies = { "nvim-lua/plenary.nvim" },
     opts = {},
@@ -85,8 +94,21 @@ return {
   },
   {
     "nvim-treesitter/nvim-treesitter",
+    dependencies = {
+      {
+        "windwp/nvim-ts-autotag",
+      },
+      {
+        "kevinhwang91/nvim-ufo",
+        dependencies = { "kevinhwang91/promise-async" },
+        opts = {},
+      },
+    },
     opts = function()
       return require("overrides.nvim-treesitter")
+    end,
+    config = function(_, opts)
+      require("nvim-treesitter.configs").setup(opts)
     end,
   },
   {

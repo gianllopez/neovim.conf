@@ -18,3 +18,7 @@ vim.diagnostic.config({ signs = false })
 vim.opt.confirm = true
 vim.opt.wrap = false
 vim.opt.swapfile = false
+vim.o.foldcolumn = "1"
+vim.o.foldlevel = 150
+vim.o.foldlevelstart = 100
+vim.o.foldenable = true

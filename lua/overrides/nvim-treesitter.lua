@@ -3,5 +3,12 @@ return {
     "lua",
     "python",
     "typescript",
+    "tsx",
+    "html",
+    "css",
+    "scss",
+  },
+  autotag = {
+    enable = true,
   },
 }
