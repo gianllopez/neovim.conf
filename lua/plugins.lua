@@ -82,10 +82,6 @@ return {
     opts = {},
   },
   {
-    "numToStr/Comment.nvim",
-    opts = {},
-  },
-  {
     "nvim-tree/nvim-tree.lua",
     dependencies = { "nvim-tree/nvim-web-devicons" },
     opts = function()
@@ -95,8 +91,18 @@ return {
   {
     "nvim-treesitter/nvim-treesitter",
     dependencies = {
+      { "windwp/nvim-ts-autotag" },
       {
-        "windwp/nvim-ts-autotag",
+        "numToStr/Comment.nvim",
+        dependencies = {
+          { "JoosepAlviste/nvim-ts-context-commentstring" },
+        },
+        opts = function()
+          return require("overrides.comment")
+        end,
+        config = function(_, opts)
+          require("Comment").setup(opts)
+        end,
       },
       {
         "kevinhwang91/nvim-ufo",

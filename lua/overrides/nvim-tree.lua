@@ -8,4 +8,7 @@ return {
       enable = true,
     },
   },
+  git = {
+    enable = false,
+  },
 }

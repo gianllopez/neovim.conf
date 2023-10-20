@@ -8,6 +8,10 @@ return {
     "css",
     "scss",
   },
+  context_commentstring = {
+    enable = true,
+    enable_autocmd = false,
+  },
   autotag = {
     enable = true,
   },

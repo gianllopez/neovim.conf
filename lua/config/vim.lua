@@ -12,7 +12,7 @@ vim.opt.background = "dark"
 vim.cmd([[colorscheme gruvbox]])
 
 -- diagnostics
-vim.diagnostic.config({ signs = false })
+vim.diagnostic.config({ signs = false, virtual_text = false })
 
 -- behavior
 vim.opt.confirm = true
