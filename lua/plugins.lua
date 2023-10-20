@@ -70,16 +70,18 @@ return {
     },
   },
   {
-    "nvim-pack/nvim-spectre",
-    dependencies = { "nvim-lua/plenary.nvim" },
-  },
-  {
     "sindrets/diffview.nvim",
   },
   {
     "filipdutescu/renamer.nvim",
     dependencies = { "nvim-lua/plenary.nvim" },
     opts = {},
+  },
+  {
+    "mg979/vim-visual-multi",
+    config = function()
+      require("config.vim-visual-multi").setup()
+    end,
   },
   {
     "nvim-tree/nvim-tree.lua",

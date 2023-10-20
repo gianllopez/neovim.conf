@@ -27,13 +27,10 @@ local keymaps = {
     ["<leader>qn"] = "<Cmd>cnext<CR>",                                                            -- open the `Telescope` live grep window
     ["<leader>qb"] = "<Cmd>cbefore<CR>",                                                          -- open the `Telescope` live grep window
 
-    ["<leader>tw"] = "<Cmd>TroubleToggle workspace_diagnostics<CR>",                              -- toggle the `trouble` panel for current workspace
+    ["<leader>tw"] = "<Cmd>TroubleToggle workleader_diagnostics<CR>",                             -- toggle the `trouble` panel for current workleader
     ["<leader>td"] = "<Cmd>TroubleToggle document_diagnostics<CR>",                               -- toggle the `trouble` panel for current document
     ["<leader>tn"] = "<Cmd>lua require('trouble').next({ skip_groups = true, jump = true})<CR>",  -- move to the next result in `Trouble`
     ["<leader>tb"] = "<Cmd>lua require('trouble').previous({ skip_groups=true, jump = true })<CR>", -- move to the previous result in `Trouble`
-
-    ["<leader>S"] = "<Cmd>lua require('spectre').toggle()<CR>",                                   -- toogle `nvim-spectre` panel
-    ["<leader>Sc"] = "<Cmd>lua require('spectre').open_file_search({ select_word = true })<CR>",  -- toogle `nvim-spectre` panel in current file,
 
     ["<leader>r"] = "<Cmd>lua require('renamer').rename()<CR>",                                   -- open the `renamer` float input
 
