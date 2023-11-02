@@ -9,7 +9,7 @@ vim.opt.clipboard = "unnamedplus"
 -- user interface
 vim.opt.number = true
 vim.opt.background = "dark"
-vim.cmd([[colorscheme gruvbox]])
+vim.cmd([[colorscheme tokyonight]])
 
 -- diagnostics
 vim.diagnostic.config({ signs = false, virtual_text = false })
