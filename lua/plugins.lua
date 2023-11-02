@@ -132,7 +132,7 @@ return {
     opts = {},
   },
   {
-    "ellisonleao/gruvbox.nvim",
+    "folke/tokyonight.nvim",
     priority = 100,
   },
 }
