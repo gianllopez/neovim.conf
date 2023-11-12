@@ -47,6 +47,10 @@ local keymaps = {
     ["<leader>d"] = "<Cmd>lua vim.diagnostic.open_float()<CR>",                                   -- open the current line lsp diagnostic
     ["<leader>dn"] = "<Cmd>lua vim.diagnostic.goto_next()<CR>",                                   -- move to the current line next lsp diagnostic
     ["<leader>dp"] = "<Cmd>lua vim.diagnostic.goto_prev()<CR>",                                   -- move to the current line previous lsp diagnostic
+
+    ["<leader>sr"] = function()                                                                   -- insert the search and replace command
+      vim.api.nvim_feedkeys(":%s///gc", "n", true)
+    end,
   },
 }
 

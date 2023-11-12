@@ -7,9 +7,9 @@ local augroup = vim.api.nvim_create_augroup("LspFormatting", {})
 local sources = {
   -- lua
   formatting.stylua,
-  -- frontend
+  -- javascript / typescript
   formatting.prettier,
-  -- backend
+  -- python
   formatting.black,
   formatting.isort,
 }
