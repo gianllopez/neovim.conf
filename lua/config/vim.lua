@@ -1,5 +1,4 @@
 -- text edition
-vim.g.mapleader = " "
 vim.opt.autoindent = true
 vim.opt.expandtab = true
 vim.opt.tabstop = 2
