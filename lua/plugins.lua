@@ -69,9 +69,7 @@ return {
       },
     },
   },
-  {
-    "sindrets/diffview.nvim",
-  },
+  { "sindrets/diffview.nvim" },
   {
     "filipdutescu/renamer.nvim",
     dependencies = { "nvim-lua/plenary.nvim" },
@@ -79,8 +77,9 @@ return {
   },
   {
     "mg979/vim-visual-multi",
-    config = function()
-      require("config.vim-visual-multi").setup()
+    lazy = false,
+    init = function()
+      require("config.vim-visual-multi").init()
     end,
   },
   {
