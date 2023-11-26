@@ -1,4 +1,4 @@
-local utils = require("snippets.utils")
+local helpers = require("snippets.helpers")
 
 return {
   -- `React Native` screen with general and standarized functionalities.
@@ -38,7 +38,7 @@ return {
     }),
     i(2),
     t(", set"),
-    f(capitalize, { 2 }),
+    f(helpers.capitalize, { 2 }),
     t({ "] = useState<" }),
     i(3),
     t(">("),
