@@ -1,4 +1,4 @@
-local helpers = require("snippets.helpers")
+local utils = require("snippets.utils")
 
 return {
 	-- console log.
@@ -12,7 +12,7 @@ return {
 		t("const ["),
 		i(1),
 		t(", set"),
-		f(helpers.capitalize, { 1 }),
+		f(utils.capitalize, { 1 }),
 		t({ "] = useState<" }),
 		i(2),
 		t(">("),

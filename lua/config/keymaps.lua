@@ -1,14 +1,12 @@
 local keymap = vim.keymap
 
-local utils = require("utils")
-
-local trouble = require("trouble")
 local renamer = require("renamer")
+local trouble = require("trouble")
 
 local options = { noremap = true, silent = true }
 
 -- shortcuts
-keymap.set("n", ";", ":", utils.merge(options, { nowait = true }))
+keymap.set("n", ";", ":", options)
 keymap.set("n", "<S-Up>", "<Cmd>:m .-2<CR>", options)
 keymap.set("n", "<S-Down>", "<Cmd>:m .+1<CR>", options)
 keymap.set("n", "<leader>sr", function()
