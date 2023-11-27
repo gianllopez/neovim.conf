@@ -1,24 +1,26 @@
 return {
 	"nvim-treesitter/nvim-treesitter",
 	build = ":TSUpdate",
-	opts = {
-		ensure_installed = {
-			"lua",
-			"python",
-			"typescript",
-			"tsx",
-			"html",
-			"css",
-			"scss",
-		},
-		context_commentstring = {
-			enable = true,
-			enable_autocmd = false,
-		},
-		autotag = {
-			enable = true,
-		},
-	},
+	config = function()
+		require("nvim-treesitter.configs").setup({
+			ensure_installed = {
+				"lua",
+				"python",
+				"typescript",
+				"tsx",
+				"html",
+				"css",
+				"scss",
+			},
+			context_commentstring = {
+				enable = true,
+				enable_autocmd = false,
+			},
+			autotag = {
+				enable = true,
+			},
+		})
+	end,
 	dependencies = {
 		{
 			"numToStr/Comment.nvim",

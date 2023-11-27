@@ -33,8 +33,9 @@ keymap.set("n", "<leader>fg", "<Cmd>Telescope live_grep<CR>", options)
 
 -- quickfix
 keymap.set("n", "<leader>qo", "<Cmd>copen<CR>", options)
-keymap.set("n", "<leader>qc", "<Cmd>cnext<CR>", options)
-keymap.set("n", "<leader>qn", "<Cmd>cbefore<CR>", options)
+keymap.set("n", "<leader>qn", "<Cmd>cnext<CR>", options)
+keymap.set("n", "<leader>qb", "<Cmd>cbefore<CR>", options)
+keymap.set("n", "<leader>qc", "<Cmd>cclose<CR>", options)
 
 -- trouble
 keymap.set("n", "<leader>tw", "<Cmd>TroubleToggle workleader_diagnostics<CR>", options)
