@@ -23,11 +23,8 @@ keymap.set("n", "<leader>cl", "<Cmd>BufferLineCloseLeft<CR>", options)
 keymap.set("n", "<leader>cr", "<Cmd>BufferLineCloseRight<CR>", options)
 keymap.set("n", "<leader>co", "<Cmd>BufferLineCloseOthers<CR>", options)
 
--- nvim-tree
-keymap.set("n", "<leader>e", "<Cmd>NvimTreeFocus<CR>", options)
-keymap.set("n", "<leader>n", "<Cmd>NvimTreeToggle<CR>", options)
-
 -- telescope
+keymap.set("n", "<leader>fb", "<Cmd>Telescope file_browser<CR>", options)
 keymap.set("n", "<leader>ff", "<Cmd>Telescope find_files<CR>", options)
 keymap.set("n", "<leader>fg", "<Cmd>Telescope live_grep<CR>", options)
 
