@@ -16,7 +16,7 @@ return {
 			},
 		}
 		opts.defaults = {
-			file_ignore_patterns = { ".venv", "node_modules" },
+			file_ignore_patterns = { ".venv", "node_modules", "Pods", "vendor" },
 		}
 		require("telescope").setup(opts)
 		require("telescope").load_extension("file_browser")
