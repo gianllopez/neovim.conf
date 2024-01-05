@@ -10,7 +10,7 @@ return {
     local sources = {
       -- lua
       formatting.stylua,
-      -- javascript / typescript
+      -- javascript
       formatting.prettier,
       -- python
       formatting.black,

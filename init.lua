@@ -2,9 +2,9 @@ local globals = vim.g
 local options = vim.opt
 
 -- text edition
-globals.mapleader = " "
 options.autoindent = true
 options.expandtab = true
+options.smartindent = true
 options.tabstop = 2
 options.shiftwidth = 2
 options.clipboard = "unnamedplus"

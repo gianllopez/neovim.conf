@@ -1,5 +1,5 @@
 return {
-	merge = function(destination, source)
+	merge = function(source, destination)
 		for key, value in ipairs(source) do
 			destination[key] = value
 		end
