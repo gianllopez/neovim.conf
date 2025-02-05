@@ -13,6 +13,8 @@ return {
 						"pyright",
 						-- typescript
 						"vtsls",
+						-- typescript, javascript
+						"eslint-lsp",
 						-- tailwindcss
 						"tailwindcss-language-server",
 					},
@@ -59,6 +61,8 @@ return {
 				},
 				-- typescript
 				vtsls = {},
+				-- typescript, javascript
+				eslint = {},
 				-- tailwindcss
 				tailwindcss = {},
 			},
