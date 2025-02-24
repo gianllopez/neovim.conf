@@ -27,6 +27,7 @@ return {
 				javascript = { "prettier" },
 				typescript = { "prettier" },
 				typescriptreact = { "prettier" },
+				htmldjango = { "djlint" },
 				css = { "prettier" },
 				json = { "prettier" },
 				svg = { "prettier" },

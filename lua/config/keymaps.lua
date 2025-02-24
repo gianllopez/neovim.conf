@@ -31,6 +31,8 @@ map("n", "sl", "<C-w>l", { noremap = true, nowait = true })
 map("n", "ch", "<Cmd>noh<CR>", { noremap = true, nowait = true })
 -- [`gianllopez/neovim.conf`]: clone current line down
 map("n", "cd", "yyPj", { noremap = true, nowait = true })
+-- [`gianllopez/neovim.conf`]: close current buffer
+map("n", "<leader>bcc", "<Cmd>bdelete<CR>", { noremap = true, nowait = true })
 -- [`gianllopez/neovim.conf`]:
 map("n", "<leader>%", function()
 	return ":%s/" .. vim.fn.expand("<cword>") .. "//gc"
